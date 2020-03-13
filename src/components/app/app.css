@@ -4,21 +4,20 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-}
-
-.header {
-  grid-area: h;
-}
-
-.header img {
-  width: 200px;
+  row-gap: 20px;
+  font-family: sans-serif;
 }
 
 .sidebar {
   grid-area: n;
 }
 
-.profile {
+.app-content {
   grid-area: c;
-  background-color: cyan;
+  background-color: rgb(189, 189, 189);
+}
+
+.titlepages{
+  padding: 10px;
+  font-size: 28px;
 }

@@ -6,6 +6,10 @@ let conf = {
     path: path.resolve(__dirname, "./dist"),
     filename: "main.js",
     publicPath: "dist/"
+    // publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     rules: [
