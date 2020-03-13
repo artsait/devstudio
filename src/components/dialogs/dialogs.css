@@ -1,0 +1,43 @@
+.dialogs {
+  display: grid;
+  grid-template-areas: "dl dd";
+  /* grid-template-rows: 20px 1fr; */
+  grid-template-columns: 3fr 6fr;
+  grid-gap: 10px;
+  row-gap: 20px;
+}
+
+.dialogs-list {
+  grid-area: dl;
+  padding: 10px;
+}
+
+.dialogs-list__name {
+  padding: 15px 15px;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 1.3rem;
+}
+.dialogs-list__link {
+  text-decoration: none;
+  color: black;
+}
+
+.dialogs-list__name.ative {
+  font-weight: 700;
+}
+
+.dialogs-display {
+  grid-area: dd;
+  padding: 10px;
+  background: #fff;
+}
+
+.dialogs-display__message {
+  color: #fff;
+  margin: 30px;
+}
+
+.dialogs-display__mtext {
+  padding: 10px;
+  background: rgb(71, 148, 248);
+}

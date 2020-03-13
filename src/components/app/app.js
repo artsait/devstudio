@@ -16,7 +16,7 @@ const App = () => {
         <Sidebar />
         <div className="app-content">
           <Route path="/dialogs" component={Dialogs} />
-          <Route path="/profile"  component={Profile} />
+          <Route path="/profile" component={Profile} />
         </div>
       </div>
     </Router>

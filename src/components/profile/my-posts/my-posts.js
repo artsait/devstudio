@@ -2,17 +2,24 @@ import React from "react";
 import "./my-posts.css";
 import Post from "./post";
 
+let posts = [
+  {id: 1, mess: 'Hello', like:10},
+  {id: 2, mess: 'Super. My First post`s', like:32},
+]
+
+let postsElements = posts
+  .map( p => <Post mess={p.mess} like={p.like}/>);
+
 const MyPosts = () => {
   return (
     <div className="profile">
       <div>
-        <input type="text"></input>
+        <form>
+          <input type="text"></input>
+          <button>add post</button>
+        </form>
       </div>
-      <div>
-        <button>Send</button>{" "}
-      </div>
-      <Post mess="Privet friends" like="15" />
-      <Post mess="It's my first post" like="24" />
+      {postsElements}
     </div>
   );
 };

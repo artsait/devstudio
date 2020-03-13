@@ -1,5 +1,6 @@
 .sidebar {
   display: grid;
+  border-right: 2px solid rgb(230, 230, 230);
 }
 
 .nav {
