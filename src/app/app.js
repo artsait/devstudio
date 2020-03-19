@@ -6,7 +6,7 @@ import "./app.css";
 import Header from "../components/header";
 import Profile from "../components/profile";
 import Sidebar from "../components/sidebar";
-import Dialogs from "../components/dialogs";
+import DialogsContainer from "../components/dialogs/dialogs-container";
 
 const App = props => {
   return (
@@ -16,17 +16,9 @@ const App = props => {
       <div className="app-content">
         <Route
           path="/dialogs"
-          render={() => <Dialogs store={props.store} />}
+          render={() => <DialogsContainer />}
         />
-        <Route
-          path="/profile"
-          render={() => (
-            <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch}
-            />
-          )}
-        />
+        <Route path="/profile" render={() => <Profile />} />
       </div>
     </div>
   );

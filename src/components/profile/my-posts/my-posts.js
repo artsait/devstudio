@@ -1,10 +1,6 @@
 import React from "react";
 import "./my-posts.css";
 import Post from "./post";
-import {
-  addPostActionCreator,
-  apdateNewPostTextActionCreator
-} from "../../../redux/profile-reducer";
 
 const MyPosts = props => {
   let postsElements = props.posts.map(p => (
@@ -13,13 +9,13 @@ const MyPosts = props => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch(apdateNewPostTextActionCreator(text));
+    props.apdateNewPostText(text);
   };
 
   return (
@@ -33,7 +29,7 @@ const MyPosts = props => {
           />
         </div>
         <div>
-          <button onClick={addPost}>add post</button>
+          <button onClick={onAddPost}>add post</button>
         </div>
       </div>
       {postsElements}
