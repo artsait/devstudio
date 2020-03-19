@@ -3,21 +3,13 @@ import React from "react";
 import ReactDom from "react-dom";
 import App from "./app";
 import { BrowserRouter } from "react-router-dom";
-import StoreContext from "./storeContext";
+import { Provider } from "react-redux";
 
-let rerenderEntireTree = state => {
-  ReactDom.render(
-    <BrowserRouter>
-      <StoreContext.Provider value={store}>
-        <App/>
-      </StoreContext.Provider>
-    </BrowserRouter>,
-    document.querySelector("#app")
-  );
-};
-
-rerenderEntireTree(store.getState());
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
+ReactDom.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.querySelector("#app")
+);
